@@ -1,0 +1,19 @@
+// 1 - Package
+package siteIterasys;
+
+// 2 - Libraries
+import org.openqa.selenium.WebDriver;
+
+// 3 - Classes
+public class Cursos {
+	// 3.1  Characteristics called Attributes
+	String url; //adress site
+	WebDriver drive; //adress selenium webdriver
+	
+	// 3.2 Methods and Functions
+	@Before
+	
+	@Test
+	
+	@After
+}

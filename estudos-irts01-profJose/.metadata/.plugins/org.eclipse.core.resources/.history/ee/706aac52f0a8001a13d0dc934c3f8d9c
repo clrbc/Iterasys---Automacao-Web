@@ -1,0 +1,43 @@
+// 1 - Package++.
+package siteIterasys;
+
+import java.util.concurrent.TimeUnit;
+
+//2 - Libraries
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+// 3 - Classes
+public class Cursos {
+	// 3.1  Characteristics called Attributes
+	String url; //adress site
+	WebDriver driver; //adress selenium webdriver
+	
+	// 3.2 Methods and Functions
+	@BeforeAll
+public void iniciar() {
+	url = "https://www.iterasys.com.br";
+	System.setProperty("webdriver.chrome.driver",
+	"C:\\Users\\BRAINIAC\\estudos-irts01\\siteIterasys\\drivers\\chrome\\83\\chromedriver.exe");
+	driver = new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
+	driver.manage().window().maximize();/7
+
+	
+	}
+	
+	@AfterAll
+	public void finalizar() {
+		driver.quit();
+	}
+	
+	@Test
+	public void consultarCurso() {
+		driver.get(url);	//Open browser url
+	}
+
+}
+
